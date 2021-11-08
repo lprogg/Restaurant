@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <title>The Table</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1">
+    <link rel="icon" href="css/images/favicon.ico" type="image/x-icon" />
+
+    <!-- This is the main css file for the default theme -->
+		<!-- injector:theme -->
+		<!-- endinjector -->
+
+    <!-- This contains icon fonts used by the starter template -->
+    <link rel="stylesheet" id="uxiconFont" href="https://static.oracle.com/cdn/fnd/gallery/2107.3.0/images/iconfont/ojuxIconFont.min.css">
+
+    <!-- This is where you would add any app specific styling -->
+    <link rel="stylesheet" href="css/app.css" type="text/css"/>
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Montserrat&display=swap">
+  </head>
+
+  <body class="oj-web-applayout-body">
+    <div id="globalBody" class="oj-offcanvas-outer-wrapper oj-offcanvas-page">
+      <div id="pageContent" class="oj-web-applayout-page">
+        <header role="banner" class="header">
+          <div class="container-fluid">
+            <nav class="nav">
+                <a href="?ojr=home" class="logo">
+                    <img src="css/images/logo.png">
+                </a>
+
+                <div role="navigation" class="oj-web-applayout-max-width oj-web-applayout-navbar">
+                  <oj-navigation-list id="navTabBar" class="oj-sm-only-hide oj-md-condense oj-md-justify-content-flex-end"
+                                      data="[[navDataProvider]]"
+                                      edge="top"
+                                      item.renderer="[[KnockoutTemplateUtils.getRenderer('navTemplate', true)]]"
+                                      selection="{{selection.path}}">
+                  </oj-navigation-list>
+                </div>
+            </nav>
+          </div>
+        </header>
+        <oj-module role="main" class="oj-web-applayout-max-width oj-web-applayout-content" config="[[moduleAdapter.koObservableConfig]]">
+        </oj-module>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+
+    <!-- Template for rendering navigation items shared between nav bar and nav list -->
+    <script type="text/html" id="navTemplate">
+      <li><a href="#">
+        <span :class="[[$data.detail.iconClass]]"></span>
+        <oj-bind-text value="[[$data.detail.label]]"></oj-bind-text>
+      </a></li>
+    </script>
+
+    <!-- This injects script tags for the main javascript files -->
+		<!-- injector:scripts -->
+		<!-- endinjector -->
+
+  </body>
+
+</html>
