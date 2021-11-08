@@ -9,21 +9,21 @@
         <a href="#" class="go-to-top"><i class="fas fa-arrow-up"></i></a>
         <section class="book" id="reservation">
             <div class="container-fluid">
-                <div class="oj-flex oj-panel oj-bg-info-30 oj-border">
+                <div class="oj-flex oj-panel oj-bg-info-30 oj-border" style="margin-top: 200px;">
                     <div class="oj-flex-item oj-web-padding oj-panel oj-bg-info-30 oj-border oj-md-2">
                         <oj-validation-group valid="{{groupValid}}">
                             <oj-form-layout>
 
-                                <oj-input-number id="StudentNumberInput" label-hint="Student Number"
-                                                value="{{inputStudentNumber}}"></oj-input-number>
+                                <oj-input-number id="FoodIndexInput" label-hint="Food Index"
+                                                value="{{inputFoodIndex}}"></oj-input-number>
                                 <oj-input-text id="NameInput" label-hint="Name" value="{{inputName}}"></oj-input-text>
-                                <oj-input-text id="SurnameInput" label-hint="Surname" value="{{inputSurname}}"></oj-input-text>
-                                <oj-input-number id="AlgorithmsInput" max="10" min="0" step="1" label-hint="Algorithms"
-                                                value="{{inputAlgorithms}}" converter="[[converter]]"></oj-input-number>
-                                <oj-input-number id="ASCInput" max="10" min="0" step="1" label-hint="ASC"
-                                                value="{{inputASC}}" converter="[[converter]]"></oj-input-number>
-                                <oj-input-number id="GeometryInput" max="10" min="0" step="1" label-hint="Geometry"
-                                                value="{{inputGeometry}}" converter="[[converter]]"></oj-input-number>
+                                <oj-input-text id="TypeInput" label-hint="Type" value="{{inputType}}"></oj-input-text>
+                                <oj-input-number id="MozzarellaInput" max="5" min="0" step="1" label-hint="Mozzarella"
+                                                value="{{inputMozzarella}}" converter="[[converter]]"></oj-input-number>
+                                <oj-input-number id="TomatoSauceInput" max="5" min="0" step="1" label-hint="TomatoSauce"
+                                                value="{{inputTomatoSauce}}" converter="[[converter]]"></oj-input-number>
+                                <oj-input-number id="MushroomsInput" max="5" min="0" step="1" label-hint="Mushrooms"
+                                                value="{{inputMushrooms}}" converter="[[converter]]"></oj-input-number>
 
                             </oj-form-layout>
                             <oj-toolbar chroming='outlined'>
@@ -37,15 +37,15 @@
                         </oj-validation-group>
                     </div>
                     <div id='tableContainer' class="oj-flex-item oj-web-padding oj-panel oj-bg-info-30 oj-border">
-                        <oj-table id="table" aria-label="Students Table"
+                        <oj-table id="table" aria-label="Food Table"
                                 class="demo-table-container oj-bg-body"
-                                data="[[dataprovider]]" on-keydown="[[handleKey]]"
-                                columns='[{"headerText": "Student Number", "field": "StudentNumber"},
+                                data="[[dataProvider]]" on-keydown="[[handleKey]]"
+                                columns='[{"headerText": "Food Index", "field": "FoodIndex"},
                                             {"headerText": "Name", "field": "Name"},
-                                            {"headerText": "Surname", "field": "Surname"},
-                                            {"headerText": "Algorithms", "field": "Algorithms"},
-                                            {"headerText": "ASC", "field": "ASC"},
-                                            {"headerText": "Geometry", "field": "Geometry"}]'
+                                            {"headerText": "Type", "field": "Type"},
+                                            {"headerText": "Mozzarella", "field": "Mozzarella"},
+                                            {"headerText": "Tomato Sauce", "field": "TomatoSauce"},
+                                            {"headerText": "Mushrooms", "field": "Mushrooms"}]'
                                 selection-mode.row="{{currentSelection}}"
                                 first-selected-row="{{firstSelected}}"
                                 on-first-selected-row-changed="[[firstSelectedRowChangedListener]]"
@@ -53,7 +53,7 @@
                         </oj-table>
                         <div id="noDataDiv" class="oj-flex demo-table-container oj-sm-hide">
                             <div class="oj-flex-item oj-sm-align-self-center">
-                                <span>No data available. Please use the form controls to create a new row.</span>
+                                <span>No food available</span>
                             </div>
                         </div>
                         <oj-toolbar chroming='outlined'>
