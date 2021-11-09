@@ -10,7 +10,7 @@
         <section class="book" id="reservation">
             <div class="container-fluid">
                 <div class="oj-flex oj-panel oj-bg-info-30 oj-border" style="margin-top: 200px;">
-                    <div class="oj-flex-item oj-web-padding oj-panel oj-bg-info-30 oj-border oj-md-2">
+                    <div class="oj-flex-item oj-web-padding oj-panel oj-bg-info-30 oj-border oj-md-3">
                         <oj-validation-group valid="{{groupValid}}">
                             <oj-form-layout>
 
@@ -37,7 +37,7 @@
                         </oj-validation-group>
                     </div>
                     <div id='tableContainer' class="oj-flex-item oj-web-padding oj-panel oj-bg-info-30 oj-border">
-                        <oj-table id="table" aria-label="Food Table"
+                        <oj-table id="table" aria-label="Food Table" style="margin-left: 70px"
                                 class="demo-table-container oj-bg-body"
                                 data="[[dataProvider]]" on-keydown="[[handleKey]]"
                                 columns='[{"headerText": "Food Index", "field": "FoodIndex"},
@@ -56,7 +56,7 @@
                                 <span>No food available</span>
                             </div>
                         </div>
-                        <oj-toolbar chroming='outlined'>
+                        <oj-toolbar chroming='outlined' style="margin-left: 220px">
                             <oj-button id='resetButton' on-oj-action='[[resetRows]]' disabled='[[disableSubmit]]'>Reset Changes</oj-button>
                             <oj-button id='submitButton' on-oj-action='[[submitRows]]' disabled='[[disableSubmit]]'>Submit Changes</oj-button>
                         </oj-toolbar>
