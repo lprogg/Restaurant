@@ -60,7 +60,8 @@ define([
       const self = this;
 
       const foodArray = [
-        { FoodIndex: 1, Name: 'Pizza', Type: 'Rustica', Mozzarella: 3, TomatoSauce: 5, Mushrooms: 5 }
+        { FoodIndex: 1, Name: 'Pizza', Type: 'Rustica', Mozzarella: 3, TomatoSauce: 5, Mushrooms: 5 },
+        { FoodIndex: 2, Name: 'Pizza', Type: 'Romana', Mozzarella: 1, TomatoSauce: 1, Mushrooms: 4 }
       ];
 
       const barSeries = [
@@ -137,7 +138,7 @@ define([
           }
       };
 
-      self.currentSelection = ko.observable('single');
+      self.currentSelection = ko.observable('multiple');
 
       self.disableCreate = ko.computed(() => {
         return !self.inputFoodIndex() || self.groupValid() === "invalidShown";
@@ -173,7 +174,8 @@ define([
             const element = document.getElementById("table");
             const currentRow = element.currentRow;
             if (currentRow != null) {
-                const key = self.inputStudentNumber();
+                const key = self.inputFoodIndex();
+                
                 const newData = {
                   FoodIndex: self.inputFoodIndex(),
                   Name: self.inputName(),
@@ -309,22 +311,6 @@ define([
         ]);
     };
 
-    self.showSubmittableItems = (submittable) => {
-        const textarea = document.getElementById("bufferContent");
-        let textValue = "";
-        submittable.forEach((editItem) => {
-            textValue += editItem.operation + " ";
-            textValue += editItem.item.metadata.key + ": ";
-            textValue += JSON.stringify(editItem.item.data);
-            if (editItem.item.metadata.message) {
-                textValue +=
-                    " error: " + JSON.stringify(editItem.item.metadata.message);
-            }
-            textValue += "\n";
-        });
-        textarea.value = textValue;
-    };
-
     self.firstSelectedRowChangedListener = (event) => {
         const itemContext = event.detail.value;
         if (itemContext && itemContext.data) {
@@ -355,7 +341,6 @@ define([
     self.dataProvider.addEventListener("submittableChange", (event) => {
         const submitTable = event.detail;
         self.disableSubmit(submitTable.length === 0);
-        self.showSubmittableItems(submitTable);
     });
 
     self.dataProvider.addEventListener("mutate", (event) => {
