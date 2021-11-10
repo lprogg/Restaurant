@@ -7,7 +7,7 @@
     <div>
         <main>
             <a href="#" class="go-to-top"><i class="fas fa-arrow-up"></i></a>
-            <section class="menu" id="menu">
+            <section class="menu" id="menu" style="margin-top: 50px">
                 <div class="menu-header"></div>
                 <div class="menu-card">
                     <div class="menu-card-header">
@@ -15,33 +15,24 @@
                         <h2 class="section-title menu-title">Enjoy The Best Cuisine</h2>
                         <h3 class="section-subtitle">on this planet</h3>
                     </div>
-                    
-                    <div class="two-columns-grid">
-                        <div class="starters">
-                            <h2>Starters</h2>
-                            <div class="starters">
-                                <div class="starter-header">
-                                    <h3>Focaccia</h3>
-                                    <h4 class="price">$10</h4>
-                                </div>
-                                <p class="menu-paragraph">
-                                    Focaccia in a flat oven-baked italian braed product similar in style and texture to pizza dough.
-                                </p>
-                            </div>
-                        </div>
 
-                        <div class="mains">
-                            <h2>Mains</h2>
-                            <div class="starters">
-                                <div class="starter-header">
-                                    <h3>Pizza</h3>
-                                    <h4 class="price">$20</h4>
-                                </div>
-                                <p class="menu-paragraph">
-                                    Pizza is a dish of italian origin consisting of a usually round, flattened base of leavened wheat-based
-                                    dough topped with tomatoes, cheese and other ingrediants.
-                                </p>
-                            </div>
+                    <div class="oj-flex oj-sm-flex-items-1">
+                        <div class="oj-flex-item oj-panel oj-sm-padding-2x-horizontal">
+                            <div class="oj-typography-heading-md oj-header-border">Food Menu</div>
+                                <oj-list-view data="[[dataProvider]]" selection-mode="single" selection="{{selection}}">
+                                    <template slot="itemTemplate" data-oj-as="item">
+                                        <strong>
+                                            <oj-bind-text value="[[item.data.summary]]"></oj-bind-text>
+                                        </strong>
+                                        <div>
+                                            <oj-bind-text value="[[item.data.description]]"></oj-bind-text>
+                                        </div>
+                                    </template>
+                                </oj-list-view>
+                        </div>
+                        <div class="oj-flex-item oj-panel oj-sm-padding-2x-horizontal">
+                            <div class="oj-typography-heading-md oj-header-border">Details</div>
+                            <oj-module config="[[module.koObservableConfig]]"></oj-module>
                         </div>
                     </div>
                 </div>

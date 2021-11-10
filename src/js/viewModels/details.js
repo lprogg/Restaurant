@@ -6,17 +6,14 @@
  * @ignore
  */
 define([
-  '../accUtils',
-  'knockout',
-  'text!./food.json',
-  'ojs/ojmodulerouter-adapter',
-  'ojs/ojarraydataprovider',
-  'ojs/ojknockout',
-  'ojs/ojlistview',
-  "ojs/ojmodule-element"
+    '../accUtils',
+    'knockout',
+    'text!./food.json',
+    'ojs/ojformlayout',
+    'ojs/ojinputtext'
 ],
- function(accUtils, ko, foodJson, ModuleRouterAdapter, ArrayDataProvider) {
-    function MenuViewModel(args) {
+ function(accUtils, ko, foodJson) {
+    function DetailsViewModel(args) {
       // Below are a set of the ViewModel methods invoked by the oj-module component.
       // Please reference the oj-module jsDoc for additional information.
 
@@ -29,7 +26,7 @@ define([
        * after being disconnected.
        */
       this.connected = () => {
-        accUtils.announce('Menu page loaded.', 'assertive');
+        accUtils.announce('Details page loaded.', 'assertive');
         document.title = "Menu";
         // Implement further logic if needed
       };
@@ -53,43 +50,12 @@ define([
 
       self.foodData = JSON.parse(foodJson).incidents;
       
-      self.dataProvider = new ArrayDataProvider(self.foodData);
-      
-      self.food = ko.observable();
-      
-      self.selection = ko.pureComputed({
-          read: () => {
-              const selected = [];
-              const food = self.food();
-              if (food) {
-                  const index = self.foodData.indexOf(food);
-                  selected.push(index);
-              }
-              return selected;
-          },
-          write: (selected) => {
-            self.router.go({ path: 'details', params: { index: selected[0] } });
-          }
-      });
+      self.parametersChanged = (params) => {
+          self.food(self.foodData[params.index]);
+      };
 
       self.args = args;
-      
-      self.router = self.args.parentRouter.createChildRouter([
-          { path: 'details/{index}' },
-          { path: '', redirect: 'details' }
-      ]);
-      
-      self.router.currentState.subscribe((args) => {
-          const state = args.state;
-          if (state) {
-            self.food(self.foodData[state.params.index]);
-          }
-      });
-      
-      self.module = new ModuleRouterAdapter(self.router, {
-          viewPath: 'views/',
-          viewModelPath: 'viewModels/'
-      });
+      self.food = ko.observable(self.foodData[self.args.params.index]);
     }
 
     /*
@@ -97,6 +63,6 @@ define([
      * return a constructor for the ViewModel so that the ViewModel is constructed
      * each time the view is displayed.
      */
-    return MenuViewModel;
+    return DetailsViewModel;
   }
 );

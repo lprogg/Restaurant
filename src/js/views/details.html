@@ -1,0 +1,17 @@
+<!--
+ Copyright (c) 2014, 2021, Oracle and/or its affiliates.
+ Licensed under The Universal Permissive License (UPL), Version 1.0
+ as shown at https://oss.oracle.com/licenses/upl/
+ -->
+<div class="oj-hybrid-padding">
+    <div>
+        <oj-form-layout readonly="true">
+            <oj-bind-if test="[[food]]">
+                <oj-input-text label-hint="Id" value="[[food().id]]"></oj-input-text>
+                <oj-input-text label-hint="Reported By" value="[[food().name]]"></oj-input-text>
+                <oj-input-text label-hint="Summary" value="[[food().summary]]"></oj-input-text>
+                <oj-text-area label-hint="Description" value="[[food().description]]"></oj-text-area>
+            </oj-bind-if>
+        </oj-form-layout>
+    </div>
+</div>
