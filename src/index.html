@@ -22,6 +22,9 @@
 
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Montserrat&display=swap">
+
+    <link rel="stylesheet"
+        href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
 
   <body class="oj-web-applayout-body">
@@ -56,6 +59,12 @@
         <span :class="[[$data.detail.iconClass]]"></span>
         <oj-bind-text value="[[$data.detail.label]]"></oj-bind-text>
       </a></li>
+    </script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <script>
+      AOS.init();
     </script>
 
     <!-- This injects script tags for the main javascript files -->

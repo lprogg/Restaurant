@@ -8,9 +8,9 @@
     <main>
         <a href="#" class="go-to-top"><i class="fas fa-arrow-up"></i></a>
         <section class="book" id="reservation">
-            <div class="container-fluid">
-                <div class="oj-flex oj-panel oj-bg-info-30 oj-border" style="margin-top: 200px;">
-                    <div class="oj-flex-item oj-web-padding oj-panel oj-bg-info-30 oj-border oj-md-3">
+            <div class="container-fluid" data-aos="fade-up" data-aos-offset="400" data-aos-duration="1000">
+                <div class="oj-flex oj-panel oj-bg-neutral-0 oj-border" style="margin-top: 200px">
+                    <div class="oj-flex-item oj-web-padding oj-panel oj-bg-neutral-0 oj-border oj-md-3">
                         <oj-validation-group valid="{{groupValid}}">
                             <oj-form-layout>
 
@@ -36,9 +36,9 @@
                             </oj-toolbar>
                         </oj-validation-group>
                     </div>
-                    <div id='tableContainer' class="oj-flex-item oj-web-padding oj-panel oj-bg-info-30 oj-border">
+                    <div id='tableContainer' class="oj-flex-item oj-web-padding oj-panel oj-bg-neutral-0 oj-border">
                         <oj-table id="table" aria-label="Food Table" style="margin-left: 70px"
-                                class="demo-table-container oj-bg-body"
+                                class="demo-table-container oj-bg-neutral-0"
                                 data="[[dataProvider]]" on-keydown="[[handleKey]]"
                                 columns='[{"headerText": "Food Index", "field": "FoodIndex"},
                                             {"headerText": "Name", "field": "Name"},
@@ -61,7 +61,7 @@
                             <oj-button id='submitButton' on-oj-action='[[submitRows]]' disabled='[[disableSubmit]]'>Submit Changes</oj-button>
                         </oj-toolbar>
                     </div>
-                    <div class="oj-flex-item oj-web-padding oj-panel oj-bg-info-30 oj-border oj-md-3">
+                    <div class="oj-flex-item oj-web-padding oj-panel oj-bg-neutral-0 oj-border oj-md-3">
                         <oj-chart id="barChart" on-keydown="[[handleKey]]"
                         type='bar' 
                         series='[[barSeriesValue]]' 
