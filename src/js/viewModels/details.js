@@ -48,7 +48,7 @@ define([
 
       const self = this
 
-      self.foodData = JSON.parse(foodJson).incidents;
+      self.foodData = JSON.parse(foodJson).food;
       
       self.parametersChanged = (params) => {
           self.food(self.foodData[params.index]);

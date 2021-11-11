@@ -51,7 +51,7 @@ define([
 
       const self = this
 
-      self.foodData = JSON.parse(foodJson).incidents;
+      self.foodData = JSON.parse(foodJson).food;
       
       self.dataProvider = new ArrayDataProvider(self.foodData);
       

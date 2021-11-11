@@ -1,0 +1,144 @@
+{
+    "food": [
+        {
+            "id": 1,
+            "customerId": 1001,
+            "name": "Joe King",
+            "summary": "Pizza",
+            "description": "Pizza is a dish of italian origin consisting of a usually round, flattened base of leavened wheat-based dough topped with tomatoes, cheese and other ingredients."
+        },
+        {
+            "id": 2,
+            "customerId": 1002,
+            "name": "Larry Wright",
+            "summary": "Pasta Carbonara",
+            "description": "An Italian pasta dish from Rome."
+        },
+        {
+            "id": 3,
+            "customerId": 1003,
+            "name": "Wilbur Small",
+            "summary": "Chicken and Mushroom Pie",
+            "description": "Nothing's better than a good pie when the nights are long and there are plenty of stories to tell."
+        },
+        {
+            "id": 4,
+            "customerId": 1004,
+            "name": "Grant Wall",
+            "summary": "Classic Burger",
+            "description": "Meet the best burger."
+        },
+        {
+            "id": 5,
+            "customerId": 1005,
+            "name": "Charles Paige",
+            "summary": "Macaroni and Cheese",
+            "description": "Pasta and cheese traditionally macaroni and cheddar baked in a casserole."
+        },
+        {
+            "id": 6,
+            "customerId": 1006,
+            "name": "Chris Fields",
+            "summary": "Moussaka",
+            "description": "This authentic Moussaka has a couple of flavour twists to give you a deliciously unforgettable eating experience."
+        },
+        {
+            "id": 7,
+            "customerId": 1007,
+            "name": "Sally Struthers",
+            "summary": "Spinach Pasta with Roasted Broccoli",
+            "description": "This healthy pasta features spinach and roasted vegetables tossed into olive oil."
+        },
+        {
+            "id": 8,
+            "customerId": 1008,
+            "name": "Joe King",
+            "summary": "Pepperoni Pizza Pasta",
+            "description": "Topped with pepperoni, mozzarella and parmesan this pizza casserole redefines what delicious means."
+        },
+        {
+            "id": 9,
+            "customerId": 1009,
+            "name": "Larry Wright",
+            "summary": "Sarma wrapped in grape leaves",
+            "description": "Traditional turkish food."
+        },
+        {
+            "id": 10,
+            "customerId": 1010,
+            "name": "Wilbur Small",
+            "summary": "Cheese and Mushroom Stuffed Chicken Schnitzels",
+            "description": "This dish is so delicious that you'll be wanting to come back to our restaurant sooner than you'd think."
+        },
+        {
+            "id": 11,
+            "customerId": 1011,
+            "name": "Grant Wall",
+            "summary": "Focaccia",
+            "description": "Focaccia in a flat oven-baked italian bread product similar in style and texture to pizza dough."
+        },
+        {
+            "id": 12,
+            "customerId": 1012,
+            "name": "Charles Paige",
+            "summary": "Bruschetta",
+            "description": "A starter dish from Italy."
+        },
+        {
+            "id": 13,
+            "customerId": 1013,
+            "name": "Chris Fields",
+            "summary": "Caesar Salad",
+            "description": "This Caesar Salad is bright, fresh, full of flavour and much lighter."
+        },
+        {
+            "id": 14,
+            "customerId": 1014,
+            "name": "Sally Struthers",
+            "summary": "Chicken Wings",
+            "description": "Go light and try out the chicken wings."
+        },
+        {
+            "id": 15,
+            "customerId": 1015,
+            "name": "Wilbur Small",
+            "summary": "Stuffed Mushrooms",
+            "description": "With garlic, parmesan and cheese these are the ultimate appetizer for any occasion."
+        },
+        {
+            "id": 16,
+            "customerId": 1016,
+            "name": "Grant Wall",
+            "summary": "Watermelon and Feta Salad",
+            "description": "Impressive salad that will quickly become one of your new favourites."
+        },
+        {
+            "id": 17,
+            "customerId": 1017,
+            "name": "Charles Paige",
+            "summary": "Rice Paper Rolls",
+            "description": "Fresh and quick to prepare."
+        },
+        {
+            "id": 18,
+            "customerId": 1018,
+            "name": "Chris Fields",
+            "summary": "Crispy Parmesan Roasted Potatoes",
+            "description": "Potatoes are coated with a light Parmesan cheese mixture and roasted till golden with an irresistible crunch."
+        },
+        {
+            "id": 19,
+            "customerId": 1019,
+            "name": "Sally Struthers",
+            "summary": "Crudites Platter",
+            "description": "Any veggies will go here. Served mostly raw."
+        },
+        {
+            "id": 20,
+            "customerId": 1020,
+            "name": "Sally Struthers",
+            "summary": "Crispy Calamari Rings",
+            "description": "Deep fried calamari with extra crispy coating. It's served with a simple tomato sauce."
+        }
+    ]
+}
