@@ -599,6 +599,19 @@ a.oj-navigationlist-item-content
     }
 }
 
+.oj-web-applayout-max-width {
+    max-width: unset;
+}
+
+.oj-web-applayout-content {
+    padding-left: unset;
+    padding-right: unset;
+}
+
+.oj-hybrid-padding {
+    padding: unset;
+}
+
 .sendOffScreen {
   position: absolute;
   left: -10000px;
